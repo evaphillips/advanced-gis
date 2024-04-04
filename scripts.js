@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // Hover functionality
     $('.image-wrapper').hover(function () {
         // This function is triggered when the mouse pointer enters the area of an element with the class 'image-wrapper'
 
@@ -21,5 +22,16 @@ $(document).ready(function () {
 
         $(this).find('.text').addClass('hide');
         // Finds the element with the class 'text' inside the current 'image-wrapper' element and adds the class 'hide'
+    });
+
+    // Click functionality
+    $('.image-wrapper').click(function () {
+        // This function is triggered when an image inside an 'image-wrapper' is clicked
+
+        var customText = $(this).data('text');
+        // Retrieves the custom text stored in the 'data-text' attribute of the clicked 'image-wrapper' element
+
+        alert(customText);
+        // Displays the custom text in an alert dialog box
     });
 });
